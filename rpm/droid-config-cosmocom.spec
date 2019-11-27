@@ -1,7 +1,7 @@
 # These and other macros are documented in ../droid-configs-device/droid-configs.inc
 # Feel free to cleanup this file by removing comments, once you have memorised them ;)
 
-%define device cosmopda
+%define device cosmocom
 %define vendor planet
 
 %define vendor_pretty Planet Computers
