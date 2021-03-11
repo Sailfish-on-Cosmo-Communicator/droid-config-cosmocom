@@ -1,0 +1,5 @@
+[lipstick]
+orientationLock='landscape-inverted'
+
+[desktop/sailfish/silica]
+size_category='large'
