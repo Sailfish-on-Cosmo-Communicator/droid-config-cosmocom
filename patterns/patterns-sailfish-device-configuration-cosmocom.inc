@@ -1,32 +1,32 @@
-Name: jolla-configuration-cosmocom
+%package -n patterns-sailfish-device-configuration-cosmocom
 Summary: Jolla Configuration cosmocom
-Version: 0.0.1
-Release: 1
-License: BSD-3-Clause
-Source: %{name}-%{version}.tar.gz
-Requires: jolla-hw-adaptation-cosmocom
+Requires: patterns-sailfish-device-configuration-common-cosmocom
+Requires: patterns-sailfish-device-adaptation-cosmocom
+
 Requires: patterns-sailfish-cellular-apps
 Requires: patterns-sailfish-applications
 Requires: patterns-sailfish-ui
+Requires: patterns-sailfish-store-applications
 
 # Early stages of porting benefit from these:
-#Requires: sailfish-porter-tools
-Requires: jolla-developer-mode
-Requires: sailfishsilica-qt5-demos
-Requires: busybox-static
-Requires: net-tools
-Requires: openssh-clients
-Requires: openssh-server
-Requires: vim-enhanced
-Requires: zypper
+Requires: patterns-sailfish-rnd
+# dev-tools pattern will be fixed in the next release
+# for now we'll use its 'exploded' version:
+#Requires: patterns-sailfish-dev-tools
+Recommends: jolla-developer-mode
 Requires: strace
+Requires: gdb
+Requires: gdb-gdbserver
+Requires: vim-enhanced
+Requires: less
+Requires: valgrind
+Requires: lipstick-qt5-tools
+Requires: libhybris-tests
+Requires: busybox-static
+Requires: openssh-server
+Requires: zypper
 
-# jolla-rnd-device will enable usb-moded even when UI is not yet
-# brought up (useful during development, available since update10)
-Requires: jolla-rnd-device
-#End sailfish-porter-tools
-
-Requires: sailfish-content-graphics-z1.5
+Requires: sailfish-content-graphics-z%{icon_res}
 
 # For NFC
 Requires: jolla-settings-system-nfc
@@ -57,6 +57,7 @@ Requires: csd
 # to improve camera startup times and the like
 Requires: mapplauncherd-booster-silica-qt5-media
 
-%description
-Meta package to install packages for cosmocom configurations
-%files 
+%description -n patterns-sailfish-device-configuration-cosmocom
+Pattern with packages for cosmocom configurations
+
+%files -n patterns-sailfish-device-configuration-cosmocom

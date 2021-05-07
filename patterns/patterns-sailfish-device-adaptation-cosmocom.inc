@@ -1,9 +1,15 @@
-Name: jolla-hw-adaptation-cosmocom
+%package -n patterns-sailfish-device-adaptation-cosmocom
 Summary: Jolla HW Adaptation cosmocom
-Version: 0.0.1
-Release: 1
-License: BSD-3-Clause
-Source: %{name}-%{version}.tar.gz
+Requires: droid-hal-cosmocom
+Requires: droid-hal-cosmocom-img-boot
+Requires: droid-hal-cosmocom-kernel-modules
+Requires: droid-config-cosmocom-sailfish
+Requires: droid-config-cosmocom-pulseaudio-settings
+Requires: droid-config-cosmocom-policy-settings
+Requires: droid-config-cosmocom-preinit-plugin
+Requires: droid-config-cosmocom-flashing
+Requires: droid-config-cosmocom-bluez5
+Requires: droid-hal-version-cosmocom
 
 Requires: qt5-plugin-generic-evdev
 
@@ -27,7 +33,7 @@ Requires: ngfd-plugin-native-vibrator
 Requires: qt5-feedback-haptics-native-vibrator
 
 # Sensors
-Requires: hybris-libsensorfw-qt5
+Requires: hybris-libsensorfw-qt5-binder
 
 # Vibra
 Requires: ngfd-plugin-native-vibrator
@@ -36,7 +42,9 @@ Requires: qt5-feedback-haptics-native-vibrator
 # Pulseadio
 Requires: pulseaudio-modules-droid
 Requires: pulseaudio-modules-droid-hidl
-Requires: audiosystem-passthrough
+
+# Needed for camera to work
+Requires: audiosystem-passthrough-dummy-af
 
 # for audio recording to work:
 Requires: qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
@@ -53,6 +61,7 @@ Requires: gstreamer1.0-plugins-base
 Requires: gstreamer1.0-plugins-bad
 Requires: nemo-gstreamer1.0-interfaces
 Requires: gstreamer1.0-droid
+Requires: gmp-droid
 
 # This is needed for notification LEDs
 Requires: mce-plugin-libhybris
@@ -74,19 +83,7 @@ Requires: geoclue-provider-hybris
 # For mounting SD card automatically
 Requires: sd-utils
 
-Requires: droid-hal-cosmocom
-Requires: droid-hal-cosmocom-img-boot
-Requires: droid-hal-cosmocom-kernel-modules
-Requires: droid-config-cosmocom-sailfish
-Requires: droid-config-cosmocom-pulseaudio-settings
-Requires: droid-config-cosmocom-policy-settings
-Requires: droid-config-cosmocom-preinit-plugin
-Requires: droid-config-cosmocom-flashing
-Requires: droid-config-cosmocom-bluez5
-Requires: droid-hal-version-cosmocom
+%description -n patterns-sailfish-device-adaptation-cosmocom
+Pattern with packages for cosmocom HW Adaptation
 
-
-%description
-Meta package to install packages for cosmocom HW Adaptation
-%files
- 
+%files -n patterns-sailfish-device-adaptation-cosmocom

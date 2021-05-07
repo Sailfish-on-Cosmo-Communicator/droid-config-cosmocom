@@ -1,0 +1,10 @@
+# Feel free to disable non-critical HA parts during devel by commenting lines out
+# Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
+
+Description: Pattern with packages for cosmocom configurations
+Name: jolla-configuration-cosmocom
+Requires:
+- patterns-sailfish-device-configuration-cosmocom
+
+Summary: Jolla Configuration cosmocom
+
